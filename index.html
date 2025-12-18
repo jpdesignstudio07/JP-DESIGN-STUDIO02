@@ -25,7 +25,7 @@
     <meta property="twitter:description" content="Transform your business with strategic design. We specialize in logos, branding, and high-impact marketing visuals." />
     <meta property="twitter:image" content="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200" />
 
-    <!-- Schema Markup (JSON-LD) for LocalBusiness/ProfessionalService -->
+    <!-- Schema Markup (JSON-LD) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -63,7 +63,6 @@
     </script>
 
     <script>
-      // Prevent flash of wrong theme
       if (localStorage.getItem('theme') === 'light') {
         document.documentElement.classList.add('light');
       }
@@ -76,7 +75,6 @@
           extend: {
             colors: {
               jp: {
-                // Defined as RGB variables to support Tailwind opacity modifiers (e.g. bg-jp-dark/90)
                 dark: 'rgb(var(--jp-dark) / <alpha-value>)',
                 card: 'rgb(var(--jp-card) / <alpha-value>)',
                 yellow: '#FFD80E',
@@ -125,29 +123,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
       :root {
-        /* Dark Mode (Default) RGB Values */
-        --jp-dark: 36 35 58;    /* #24233A */
-        --jp-card: 47 46 74;    /* #2F2E4A */
-        
+        --jp-dark: 36 35 58;
+        --jp-card: 47 46 74;
         --text-main: #FFFFFF;
-        --text-muted: #D1D5DB; /* gray-300 */
-        
+        --text-muted: #D1D5DB;
         --border-opacity: 0.1;
         --overlay-opacity: 0.05;
       }
-      
       html.light {
-        /* Light Mode RGB Values */
-        --jp-dark: 243 244 246; /* #F3F4F6 (gray-100) */
-        --jp-card: 255 255 255; /* #FFFFFF */
-        
-        --text-main: #1F2937;   /* #1F2937 (gray-800) */
-        --text-muted: #4B5563;  /* #4B5563 (gray-600) */
-        
+        --jp-dark: 243 244 246;
+        --jp-card: 255 255 255;
+        --text-main: #1F2937;
+        --text-muted: #4B5563;
         --border-opacity: 0.15;
         --overlay-opacity: 0.05;
       }
-
       body {
         font-family: 'Inter', sans-serif;
         background-color: rgb(var(--jp-dark));
@@ -155,52 +145,26 @@
         transition: background-color 0.3s ease, color 0.3s ease;
         scroll-behavior: smooth;
       }
-
-      /* Transitions for theme switching */
-      .bg-jp-dark, .bg-jp-card {
-        transition: background-color 0.3s ease;
-      }
-      
-      /* GLOBAL OVERRIDES FOR LIGHT MODE compatibility with existing classes */
-      /* This allows us to keep 'text-white' in the markup but flip it in light mode */
       html.light .text-white { color: var(--text-main) !important; }
       html.light .text-gray-300 { color: var(--text-muted) !important; }
-      html.light .text-gray-400 { color: #6B7280 !important; } /* gray-500 */
-      
-      /* Flip borders and backgrounds that use white/x transparency */
+      html.light .text-gray-400 { color: #6B7280 !important; }
       html.light .border-white\/5, html.light .border-white\/10 { 
         border-color: rgba(0,0,0, var(--border-opacity)) !important; 
       }
       html.light .bg-white\/5, html.light .bg-white\/10 { 
         background-color: rgba(0,0,0, var(--overlay-opacity)) !important; 
       }
-      
-      /* Navbar specific override for light mode glass effect */
       html.light .bg-jp-dark\/90 {
         background-color: rgba(243, 244, 246, 0.9) !important;
       }
-
-      /* Mask fade for sliders */
       .mask-fade {
         mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
         -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
       }
-
-      /* Custom scrollbar for webkit */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: rgb(var(--jp-dark)); 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #FFD80E; 
-        border-radius: 4px;
-      }
-      /* Pause animation on hover */
-      .pause-on-hover:hover {
-        animation-play-state: paused;
-      }
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: rgb(var(--jp-dark)); }
+      ::-webkit-scrollbar-thumb { background: #FFD80E; border-radius: 4px; }
+      .pause-on-hover:hover { animation-play-state: paused; }
     </style>
   <script type="importmap">
 {
@@ -208,13 +172,17 @@
     "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1",
-    "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.11.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "vite": "https://esm.sh/vite@^7.3.0"
   }
 }
 </script>
 </head>
   <body>
     <div id="root"></div>
+    <!-- Vite entry point -->
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>
