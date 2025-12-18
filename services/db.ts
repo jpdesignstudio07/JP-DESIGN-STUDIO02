@@ -141,7 +141,7 @@ const INITIAL_CLIENTS: ClientLogo[] = [
 ];
 
 const DEFAULT_SETTINGS: SiteSettings = {
-  heroImage: '/logo.png',
+  heroImage: 'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg?auto=compress&cs=tinysrgb&w=1200',
   headerLogo: '',
   footerLogo: '',
   heroTitleLine1: 'Creative Graphic Design That',

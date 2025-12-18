@@ -103,7 +103,7 @@ export const Home: React.FC = () => {
                         <img 
                           src={heroImage} 
                           alt="JP Design Studio Hero" 
-                          className="w-full h-full object-cover p-[50px] group-hover:scale-105 transition-transform duration-700"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
                       ) : (
                         <div className="w-full h-full flex flex-col items-center justify-center text-gray-600 bg-gray-900/50">
