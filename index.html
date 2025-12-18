@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>JP Design Studio | Professional Graphic Design & Branding Agency</title>
+    <meta name="description" content="JP Design Studio offers premium graphic design services including logo design, brand identity, social media creatives, packaging, and UI/UX design. Elevate your brand today." />
+    <meta name="keywords" content="Graphic Design, Logo Design, Brand Identity, UI/UX Design, Social Media Graphics, Packaging Design, Freelance Graphic Designer, Creative Agency, Web Design, Branding Specialist" />
+    <meta name="author" content="JP Design Studio" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jpdesignstudio.com/" />
+    <meta property="og:title" content="JP Design Studio | Professional Graphic Design & Branding" />
+    <meta property="og:description" content="Transform your business with strategic design. We specialize in logos, branding, and high-impact marketing visuals." />
+    <meta property="og:image" content="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://jpdesignstudio.com/" />
+    <meta property="twitter:title" content="JP Design Studio | Professional Graphic Design & Branding" />
+    <meta property="twitter:description" content="Transform your business with strategic design. We specialize in logos, branding, and high-impact marketing visuals." />
+    <meta property="twitter:image" content="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200" />
+
+    <!-- Schema Markup (JSON-LD) for LocalBusiness/ProfessionalService -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "JP Design Studio",
+      "image": "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      "@id": "https://jpdesignstudio.com",
+      "url": "https://jpdesignstudio.com",
+      "telephone": "90233 26054",
+      "email": "jpdesignstudio@gmail.com",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "10:00",
+        "closes": "19:00"
+      },
+      "sameAs": [
+        "https://instagram.com",
+        "https://linkedin.com",
+        "https://facebook.com"
+      ],
+      "description": "JP Design Studio is a top-rated graphic design agency specializing in brand identity, logo design, and digital marketing assets."
+    }
+    </script>
+
+    <script>
+      // Prevent flash of wrong theme
+      if (localStorage.getItem('theme') === 'light') {
+        document.documentElement.classList.add('light');
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              jp: {
+                // Defined as RGB variables to support Tailwind opacity modifiers (e.g. bg-jp-dark/90)
+                dark: 'rgb(var(--jp-dark) / <alpha-value>)',
+                card: 'rgb(var(--jp-card) / <alpha-value>)',
+                yellow: '#FFD80E',
+                light: '#F3F4F6'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              'bounce-subtle': {
+                '0%, 100%': { transform: 'translateY(0)', animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)' },
+                '50%': { transform: 'translateY(-6px)', animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)' },
+              },
+              'fade-in': {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              'fade-in-up': {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              scroll: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              }
+            },
+            animation: {
+              float: 'float 6s ease-in-out infinite',
+              'float-delayed': 'float 7s ease-in-out 2s infinite',
+              'float-fast': 'float 5s ease-in-out 1s infinite',
+              'bounce-subtle': 'bounce-subtle 1.5s infinite',
+              'fade-in': 'fade-in 0.6s ease-out forwards',
+              'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
+              'fade-in-up-delay': 'fade-in-up 0.8s ease-out 0.2s forwards',
+              scroll: 'scroll 30s linear infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        /* Dark Mode (Default) RGB Values */
+        --jp-dark: 36 35 58;    /* #24233A */
+        --jp-card: 47 46 74;    /* #2F2E4A */
+        
+        --text-main: #FFFFFF;
+        --text-muted: #D1D5DB; /* gray-300 */
+        
+        --border-opacity: 0.1;
+        --overlay-opacity: 0.05;
+      }
+      
+      html.light {
+        /* Light Mode RGB Values */
+        --jp-dark: 243 244 246; /* #F3F4F6 (gray-100) */
+        --jp-card: 255 255 255; /* #FFFFFF */
+        
+        --text-main: #1F2937;   /* #1F2937 (gray-800) */
+        --text-muted: #4B5563;  /* #4B5563 (gray-600) */
+        
+        --border-opacity: 0.15;
+        --overlay-opacity: 0.05;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: rgb(var(--jp-dark));
+        color: var(--text-main);
+        transition: background-color 0.3s ease, color 0.3s ease;
+        scroll-behavior: smooth;
+      }
+
+      /* Transitions for theme switching */
+      .bg-jp-dark, .bg-jp-card {
+        transition: background-color 0.3s ease;
+      }
+      
+      /* GLOBAL OVERRIDES FOR LIGHT MODE compatibility with existing classes */
+      /* This allows us to keep 'text-white' in the markup but flip it in light mode */
+      html.light .text-white { color: var(--text-main) !important; }
+      html.light .text-gray-300 { color: var(--text-muted) !important; }
+      html.light .text-gray-400 { color: #6B7280 !important; } /* gray-500 */
+      
+      /* Flip borders and backgrounds that use white/x transparency */
+      html.light .border-white\/5, html.light .border-white\/10 { 
+        border-color: rgba(0,0,0, var(--border-opacity)) !important; 
+      }
+      html.light .bg-white\/5, html.light .bg-white\/10 { 
+        background-color: rgba(0,0,0, var(--overlay-opacity)) !important; 
+      }
+      
+      /* Navbar specific override for light mode glass effect */
+      html.light .bg-jp-dark\/90 {
+        background-color: rgba(243, 244, 246, 0.9) !important;
+      }
+
+      /* Mask fade for sliders */
+      .mask-fade {
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+      }
+
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: rgb(var(--jp-dark)); 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #FFD80E; 
+        border-radius: 4px;
+      }
+      /* Pause animation on hover */
+      .pause-on-hover:hover {
+        animation-play-state: paused;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
